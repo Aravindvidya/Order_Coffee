@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url(./ante-samarzija-lsmu0rUhUOk-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.menu-links{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-decoration: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(227, 174, 174);
+    color: black;
+}
+.navbar #logo{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.navbar a:hover{
+    color:rgb(232, 113, 113);
+    transition: 0.3s ease-in ;
+}
+.main-class{
+    color: aliceblue;
+    padding: 20rem 18rem;    
+}
+.content{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+.content h1{
+  color:rgb(228, 162, 109);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+.content p{
+    color: rgb(229, 179, 155);
+    margin-bottom: 16px;
+    line-height: 2rem; 
+    max-width: 600px;   
+}
+button{
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+button:hover{
+    color: rgb(190, 182, 182);
+    background-color: rgb(154, 121, 121);
+    transition: 0.2s ease-in;
+}
+#menu-btn{
+    color: aliceblue;
+    cursor: pointer;
+}
+#close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+}
+@media screen and (max-width:850px){
+    header{
+        padding: 10px 20px;
+    }
+    header .show-mobile-menu{
+     content: ;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     backdrop-filter: blur(5px);
+    }
+    #close-btn, #menu-btn{
+        display: block;
+    }
+
+    .navbar .menu-links{
+        list-style: none;
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background-color: aliceblue;
+        padding: 70px 40px 0;
+        transition: left 0.15s ease;
+    }
+
+    header .show-mobile-menu .navbar .menu-links{
+        left:0;
+       }
+    section .content{
+        text-align: center;
+    }
+    section .content :is (h1, p){
+        max-width: 100%;
+    }
+    section .content h1{
+        font-size: 2.4rem;
+        line-height: 60px;
+    }
+    section .content button{
+        padding: 9px 18px;
+    }
+}
+
+
